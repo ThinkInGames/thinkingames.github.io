@@ -1,0 +1,88 @@
+html{
+	height: 100%;
+  }
+body {
+	margin:0;
+	background: url(BG.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color:rgb(212, 212, 233);
+	background-blend-mode: screen;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	height: 100%;
+}
+a{
+	color: white;
+}
+a :hover{
+	border: solid 1.5px white;
+	border-style: ridge;
+	border-color: rgb(172, 178, 235);
+}
+/* Style the Row */
+.row{
+	width: 100%;
+}
+.row.header{
+	background-color: #373E70;
+	height:50px;
+}
+.row.container{
+	height: 100%;
+	background: rgba(19, 67, 116, 0.3);
+	
+}
+#welcome{
+	text-align: center;
+	padding-top: 20%;
+	color: White;
+}
+.box{
+	border: solid 1.5px white;
+	border-radius: 5px;
+	border-style: ridge;
+	line-height:50px;
+	font-size:5.5vw;
+	width: 20%;
+	height:20%;
+}
+.box.one{
+	margin-top:5%;
+	margin-left:20%;
+	float:left;
+
+}
+.box.two{
+	margin-top:5%;
+	margin-right:20%;
+	float:right;
+	
+}
+.link{
+	
+	width:15%;
+	
+	padding: 10px;
+	height:30px;
+	color: white
+}
+.link.left{
+	float:left;
+}
+.link.right{
+	float:right;
+}
+/* Change color on hover */
+.link:hover {
+	 background-color: #7D87D3 ;
+}
+
+.footer{
+	background: rgba(102, 178, 255, 1);
+	height: 300px;
+	margin-top:-20px;
+	text-align: center;
+}
+
