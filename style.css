@@ -43,6 +43,7 @@ a :hover{
 	border: solid 1.5px white;
 	border-radius: 5px;
 	border-style: ridge;
+	padding: 2%;
 	line-height:40px;
 	font-size:5.5vw;
 	width: 20%;
