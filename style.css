@@ -36,8 +36,9 @@ a :hover{
 }
 #welcome{
 	text-align: center;
-	padding-top: 20%;
+	padding-top: 10%;
 	color: White;
+	font-size:3vw;
 }
 .box{
 	border: solid 1.5px white;
