@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thinkle</title>
+	<!-- C S S --> 
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/styleCommon.css">
+    <link rel="stylesheet" href="CSS/styleDD.css">
+    <link rel="stylesheet" href="CSS/styleOpt.css">
+    <link rel="stylesheet" href="JS/katex/dist/katex.css" >
+    <script src="JS/algebra-0.2.6.min.js"></script>
+    <script src="JS/polynomial.js"></script>
+    <script src="JS/angular.min.js"></script>
+    <script src="JS/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="JS/jquery.ui.touch-punch.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/DragDropTouch.js" ></script>
+    <script src="JS/katex/dist/katex.js" ></script>
+    <script src="JS/publicVariables.js"></script>
+    <script src="JS/DDGenerators.js"></script>
+    <script src="JS/OptGenerators.js"></script>
+    <script src="JS/GameJS.js"></script>
+    <script src="JS/script.js"></script>
+</head>
+<body onload="startDnD(1)">
+	<div id ="optionDrill">
+		<div id="titlebar" class="jumbotron text-center">
+			<h2>Thinkle</h2>
+			<p id ="level">Level 1</p>
+		</div>
+		<!--Links-->
+		<!--
+			<div class="jumbotron" style="height:50px;">
+			<div class="col-sm-4" id="link">
+				<a href = "index.html">HOME</a>
+			</div>
+		</div>
+		-->
+		<!--Content-->	
+        <div id="battleArena" >
+            <div id="battlers" >
+                <!--Alfred-->
+			    <img src="Pics/Puustinen.png" id="alfred" style="position: relative; height:125px; float: left;margin-top:24px;opacity:0;"/>
+			    <!--Alfred's Weapon-->
+			    <div id="weapon" style="position: relative;;height:25px; float:left; width:25px;margin-top:30px;margin-left:-7px; visibility: hidden; font-size:calc(1vw + 1vh + 1vmin);" ></div>
+			    <!--Opponent-->
+			    <img src="Pics/Corona.png" id="opponent" style="z-index:1; position: relative;height:75px; margin-top:24px;  margin-right:50px; float: right;opacity:0;"/>
+			    <!--Opponent's weapon-->
+			    <div id="weaponOpp" style=" position: relative;;height:30px; float:right; width:30px;margin-top:25px;margin-right:-30px; visibility: hidden; font-size:calc(1vw + 1vh + 1vmin);"></div>
+			    <!-- Losing line-->
+			    <div id="line" style="position: relative; left:199px; width: 0px; height:148px; border: 2px dashed black;"></div>
+            </div>  
+        </div>
+        <div id="questionFrame" ondrop="drop(event)" ondragover="allowDrop(event)"; style="position: initial;"></div>
+        <div id="question"></div>
+        <div class = "actionField"></div>
+            <div id="buttons" >
+                <button class="btn" id="btn1" onclick="checkAns(1)">Option 1</button>
+                <button class="btn" id="btn2" onclick="checkAns(2)">Option 2</button>
+                <button class="btn" id="btn3" onclick="checkAns(3)">Option 3</button>
+                <button class="btn" id="btn4" onclick="checkAns(4)">Option 4</button>
+            </div>
+            <div id ="DnDs" style="display:none;"></div>
+            <div id="hidAns" style="visibility:hidden;"></div>
+        </div>
+        <div id="operatorField" style="display:none;">
+            <div class = "operator" id="add" onclick="setOperator(1)">+</div>
+            <div class = "operator" id="sub" onclick="setOperator(2)">-</div>
+            <div class = "operator" id="mul" onclick="setOperator(3)">x</div>
+            <div class = "operator" id="division" onclick="setOperator(4)">/</div>
+        </div> 
+	</div><!--End of battle/options-->
+</body>
+</html>

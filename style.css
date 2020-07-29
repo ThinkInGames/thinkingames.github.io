@@ -50,6 +50,18 @@ a :hover{
 	width: 20%;
 	height:20%;
 }
+.gamebox{
+	border: solid 1.5px white;
+	border-radius: 5px;
+	border-style: ridge;
+	padding: 2%;
+	line-height:50px;
+	font-size:3.5vw;
+	width: 50%;
+	height:20%;
+	margin:auto;
+	margin-bottom:5%;
+}
 .box.one{
 	margin-top:5%;
 	margin-left:20%;

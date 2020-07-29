@@ -1,0 +1,54 @@
+#battleArena{
+	width:400px;
+	height: 150px;
+	background-color: #89D2DC;
+	margin: auto;
+	border-radius:6px;
+}
+#buttons{
+	width:400px;;
+}
+.btn{
+	height: 150px;
+	width:50%;
+	float: left;
+	color: white;
+	line-height:150px;
+	text-align:center;
+	font-family:impact;
+	font-size: 12px;
+}
+.btn:hover{
+	color:yellow;
+}
+#btn1{
+	background-color: #3C6E71 ;
+}
+#btn2{
+	background-color: #483C56;
+}
+#btn3{
+	background-color: #2F6690 ;
+	
+}
+#btn4{
+	background-color: #1F2041;
+}
+#weapon{
+	-webkit-animation:spinAlf 0.2s linear infinite;
+    -moz-animation:spinAlf 0.2s linear infinite;
+    animation:spinAlf 0.2s linear infinite;
+
+}
+@-moz-keyframes spinAlf { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spinAlf { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spinAlf { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#weaponOpp{
+	-webkit-animation:spinOpp 0.2s linear infinite;
+    -moz-animation:spinOpp 0.2s linear infinite;
+    animation:spinOpp 0.2s linear infinite;
+}
+@-moz-keyframes spinOpp { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spinOpp { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spinOpp { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
