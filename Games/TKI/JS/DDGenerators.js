@@ -296,7 +296,7 @@ function setDropAns(l){
         break
         case 9: case 10: case 11: case 12: case 15:
             var a = Math.floor((Math.random() * 20) + 1)
-            printQuestion(a)
+            printQuestion(a.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
@@ -305,7 +305,7 @@ function setDropAns(l){
         break 
         case 7: case 8:
             var a = Math.floor((Math.random() *20) + 20)
-            printQuestion(a)
+            printQuestion(a.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
@@ -314,7 +314,7 @@ function setDropAns(l){
         break 
         case 13:
             var a =-1* Math.floor((Math.random() *10) + 1)
-            printQuestion(a)
+            printQuestion(a.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
@@ -324,7 +324,7 @@ function setDropAns(l){
         case 14: case 16: case 17: case 18:
             var sign = Math.random() < 0.5 ? -1 : 1;
             var a =sign* Math.floor((Math.random() *10) + 1)
-            printQuestion(a)
+            printQuestion(a.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
@@ -334,7 +334,7 @@ function setDropAns(l){
         case 19:
             var sign = Math.random() < 0.5 ? -1 : 1;
             var a =sign* Math.floor((Math.random() *30) + 1)
-            printQuestion(a)
+            printQuestion(a.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
