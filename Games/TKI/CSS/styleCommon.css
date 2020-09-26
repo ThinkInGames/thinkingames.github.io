@@ -1,0 +1,88 @@
+.actionField{
+	width:400px;
+	margin: auto;
+	background-color: #DAF7DC;
+	
+}
+body{
+	max-width: 400px;
+	margin:auto;
+}
+
+#link{
+	height:50px;
+	text-align:center;
+	font-size: 30px;
+    font-size: 3.5vw;
+	font-family: impact;
+}
+#optionDrill{
+	width:100%;
+}
+#play{
+	margin:auto;
+	margin-top:20%;
+	height: 100px;
+	width: 200px;
+	background-color: #FF4000;
+	font-family: impact;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+#question{
+	position:absolute;
+	font-family:impact;
+	top:250px;
+	height:150px;
+	width: 400px;
+	background-color: #8DE969;
+	text-align:center;
+    font-size: calc(1vw + 1vh + 1vmin);
+	line-height:150px;
+	z-index:-1;
+	border-radius:6px;
+}
+#questionFrame{
+	position:relative;
+	height:150px;
+	width: 400px;
+	opacity: 1;
+	text-align:center;
+	font-size: 30px;
+	font-family:impact;
+ 
+}
+
+#titlebar{
+	background-image:url("BG2.png");
+	background-position: center;
+	width: 400px;
+	height: 100px;
+	border-radius:6px;
+}
+
+
+#link:hover{
+	background-color: white;
+}
+.nav{
+	background-color: #234567;
+	color: yellow;
+	width: 20%;
+	
+}
+.jumbotron{
+	padding-top: 10px;
+	height: 50px;
+	margin-bottom:0px;
+
+}
+.nav > li{
+	margin:0px;
+}
+li{
+    margin:0px;
+	color: black;
+}
