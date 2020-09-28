@@ -562,7 +562,7 @@ function setDropAns(l){
 }
 function printQuestion(aStr){
    /* document.getElementById("question").setAttribute("stringData",aStr)
-    var aAlg = new algebra.parse(aStr);
-    document.getElementById("question").setAttribute("data",aAlg)*/
+    var aAlg = new algebra.parse(aStr);*/
+    document.getElementById("question").setAttribute("stringData",aStr)
     katex.render(aStr,question);
 }

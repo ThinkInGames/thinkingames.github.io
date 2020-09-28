@@ -29,9 +29,9 @@ function drop(ev) {
     var landing = ev.target.id;
     // DROP IN THE QUESTION ELEMENT
     if(landing=="questionFrame"){
-        var term1 = document.getElementById(divDrag).getAttribute("data")
-        var term2 = document.getElementById("question").getAttribute("data")
-        if(term1==term2){ 
+        var term1 = document.getElementById(divDrag).getAttribute("stringData")
+        var term2 = document.getElementById("question").getAttribute("stringData")
+        if(term1===term2){ 
            if(correct<4){
                 correct++   
                 startDnD(level)
