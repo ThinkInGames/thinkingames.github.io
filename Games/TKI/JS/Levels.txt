@@ -20,7 +20,14 @@ a + b + c, vaikea
 *******************************
 P H A S E  1
 *******************************
-ax + b + cx
+a x b
+-a x b
+a x (-b)
+-a x (-b)
++-a x +-b
+
+
+
 ax + b + cx + d
 ax + by + cx + dy
 ax^2 + b + cx^2 + d

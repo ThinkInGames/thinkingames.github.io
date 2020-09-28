@@ -285,7 +285,7 @@ function setDropAns(l){
                 genData(div,l) 
             }
         break
-        case 4:
+        case 4:  case 9:
             var a = Math.floor((Math.random() * 7) + 1)
             printQuestion(a.toString())
             printDrags()
@@ -294,7 +294,7 @@ function setDropAns(l){
                 genData(div,l) 
             }
         break
-        case 9: case 10: case 11: case 12: case 15:
+        case 10: case 11: case 12: case 15:
             var a = Math.floor((Math.random() * 20) + 1)
             printQuestion(a.toString())
             printDrags()
