@@ -13,17 +13,17 @@ function operatorVisibility(l){
         document.getElementById("mul").style.visibility="hidden"
         document.getElementById("division").style.visibility="hidden"
     }
-    if(l>4&&l<7 || l>10&&l<13 || l>16&&l<27){
+    if(l>4&&l<7 || l>10&&l<13 || l>16&&l<20){
         setOperator(1)
         document.getElementById("add").style.visibility="visible"
         document.getElementById("sub").style.visibility="visible"
         document.getElementById("mul").style.visibility="hidden"
         document.getElementById("division").style.visibility="hidden"
     }
-    if(l>26&&l<33){
+    if(l>19&&l<33){
         setOperator(3)
-        document.getElementById("add").style.visibility="hidden"
-        document.getElementById("sub").style.visibility="hidden"
+        document.getElementById("add").style.visibility="visible"
+        document.getElementById("sub").style.visibility="visible"
         document.getElementById("mul").style.visibility="visible"
         document.getElementById("division").style.visibility="hidden"
     }
@@ -42,7 +42,7 @@ function genData(div, l){
             //var aAlg = new algebra.parse(a);
             setAtrributes(a.toString(), div)
         break;
-        case 2: case 4: case 5: case 6: case 13:
+        case 2: case 4: case 5: case 6: case 13: case 20:
             var a = Math.floor((Math.random() * 10) + 1)
             //var aAlg = new algebra.parse(a);
             setAtrributes(a.toString(), div)
@@ -52,28 +52,18 @@ function genData(div, l){
            // var aAlg = new algebra.parse(a);
             setAtrributes(a.toString(), div)
         break;
-        case 7: case 9: case 11:
+        case 7: case 8: case 9: case 10: case 11: case 12:
             var a = Math.floor((Math.random() * 20) + 1)
             //var aAlg = new algebra.parse(a);
             setAtrributes(a.toString(), div)
         break;
-        case 8:
-            var a = Math.floor((Math.random() * 10) + 10)
-            //var aAlg = new algebra.parse(a);
-            setAtrributes(a.toString(), div)
-        break;
-        case 10: case 12:
-            var a = Math.floor((Math.random() * 20) + 10)
-            //var aAlg = new algebra.parse(a);
-            setAtrributes(a.toString(), div)
-        break;
-        case 14: case 17: case 18:
+        case 14: case 17: case 18: case 21: case 22: case 23: case 24:
             var sign = Math.random() < 0.5 ? -1 : 1;
             var a =sign* Math.floor((Math.random() * 10) + 1)
             //var aAlg = new algebra.parse(a);
             setAtrributes(a.toString(), div)
         break;
-        case 19:
+        case 19: 
             var sign = Math.random() < 0.5 ? -1 : 1;
             var a =sign* Math.floor((Math.random() * 20) + 1)
             //var aAlg = new algebra.parse(a);
@@ -87,7 +77,7 @@ function genData(div, l){
 /**************************************************************************************************
 			P H A S E   1
 *************************************************************************************************/
-        case 20: case 21:
+       /*  case 21:
             var a = 0
             while(a==0){a=Math.floor((Math.random() *20) -10)}
             var choose = Math.random() 
@@ -248,7 +238,7 @@ function genData(div, l){
                     var aAlg = b;
             }
             setAtrributes(a, aAlg, div)
-        break;
+        break;*/
     }
 }
 function setAtrributes(aStr, div){
@@ -344,25 +334,37 @@ function setDropAns(l){
 /**************************************************************************************************
 			P H A S E   1
 *************************************************************************************************/
-
-        case 20: case 21:
+        case 20:
             var a = 0
-            while(a==0){a=Math.floor((Math.random() *20) -10)+"* x"}
+            while(a==0){a=Math.floor((Math.random() *8)+3);if(a==1){a=0}}
             var b = 0
-            while(b==0){b=Math.floor((Math.random() *20) -10)}
-            if(b<0){
-                a+=b
+            while(b==0){b=Math.floor((Math.random() *8)+3);if(b==1){b=0}}
+            var dropQ = a*b
+            printQuestion(dropQ.toString())
+            printDrags()
+            for(var i = 1; i<5; i++){
+                var div = "div"+i
+                genData(div,l) 
             }
-            if(b>0){
-                a+="+"+b
-            }
-            printQuestion(a)
+        break ; 
+ 
+        case 21: case 22: case 23: case 24:
+            var a = 0
+            while(a==0){a=Math.floor((Math.random() *20) -10);if(b==1){b=0}}
+            var b = 0
+            while(b==0){b=Math.floor((Math.random() *20) -10);if(b==1){b=0}}
+            var dropQ = a*b
+            printQuestion(dropQ.toString())
             printDrags()
             for(var i = 1; i<5; i++){
                 var div = "div"+i
                 genData(div,l) 
             }
         break ;
+/**************************************************************************************************
+			P H A S E   2  E N D S
+*************************************************************************************************/
+        /*
         case 22:
             var Index1= Math.floor(Math.random() * 4)
             var Index2 = Index1
@@ -556,8 +558,8 @@ function setDropAns(l){
                 var div  = "div"+i
                 genData(div,l) 
             }
-        break
-
+        break;
+*/
     }
 }
 function printQuestion(aStr){

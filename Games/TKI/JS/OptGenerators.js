@@ -66,24 +66,27 @@ function setQuestion(l){
             doCalc9()//ax + bx + cx, vaikea
 		break;
 /**************************************************************************************************
-			P H A S E   1
-*************************************************************************************************
+			P H A S E   1  E N D S
+*************************************************************************************************/
 		case 20:
-            doCalc10()//ax + b + cx
+            doMulti1()//a x b
 		break;
 		case 21:
-            doCalc11()//ax + b + cx + d
+             doMulti2()//-a x b
 		break;
 		case 22:
-            doCalc12()//ax + by + cx + dy
+             doMulti3()//a x(-b)
 		break;
 		case 23:
-            doCalc13()//ax + by + cx + dy
+            doMulti4()//-a x (-b)
 		break;
 		case 24:
-            doCalc14()//ax + by + cx + dy
+			doCalc10()//+-a x (+-b)
 		break;
-		case 25:
+/**************************************************************************************************
+			P H A S E   1  E N D S
+*************************************************************************************************/
+		/*case 25:
             doCalc15()//ax^n + bx^m + cx^n + dx^m
 		break;
 		case 26:
@@ -110,8 +113,8 @@ function setQuestion(l){
 		case 33:
             doDiv1()//ax/b| a,b>0
         break;
+		*/
 		
-	*/	
 	default: 	
 	document.getElementById("question").innerHTML="Congrats! You are done for now. <br>More levels are coming...";
 	document.getElementById("btn1").disabled = true;
@@ -361,34 +364,77 @@ function doCalc9(){//a + b + c, vaikea
 	printOpts(options);
 }
 /**************************************************************************************************
-			P H A S E   1
+			P H A S E   1   E N D S
 *************************************************************************************************/
-function doCalc10(){//ax + b + cx 
-	var a = 0;
-	while(a==0){a= Math.floor((Math.random() * 20) - 10);}
-	var term1 = new Expression("x").multiply(a)
-	var b = 0;
-	while(b==0){b = Math.floor((Math.random() * 20) - 10);}
-	var c = 0;
-	while(c==0){c = Math.floor((Math.random() * 20) - 10);}
-	var term2 = new Expression("x").multiply(c)
-	var crt = term1.add(b).add(term2);
+function doMulti1(){//a x b
+	var a = Math.floor((Math.random() * 8) + 3);
+	var b = Math.floor((Math.random() * 9) + 2);
+	
+	var crt = a*b;
 	var sign = Math.random() < 0.5 ? -1 : 1;
-	var wrong1 = new Expression("x").multiply(sign).add(crt);
-	sign = Math.random() < 0.5 ? -1 : 1;
-	var wrong2 = crt.add(sign);
-	var wrong3 = new Expression("x").multiply(b).add(term1).add(term2);
+	var wrong1 = sign+crt;
+	sign = Math.random() < 0.5 ? -2 : 2;
+	var wrong2 = sign+crt;
+	sign = Math.random() < 0.5 ? -3 : 3;
+	var wrong3 = sign+crt;
 	optionsAlg = [crt, wrong1, wrong2, wrong3];
 	options = stringOpts(optionsAlg);
-	var qExpr =algebra.toTex(term1.add(b))
-	if(c<0){
-		qExpr  += algebra.toTex(term3)
-	}
-	if(c>0){
-		qExpr  += "+"+algebra.toTex(term3)
-	}
-	katex.render(qExpr , question);
+	katex.render(a+"\\times "+b, question);
+	var inner = document.getElementById("question").innerHTML
 	printOpts(options);
+}
+function doMulti2(){//-a x b
+	var a = Math.floor((Math.random() * 8) + 3);
+	var b = Math.floor((Math.random() * 9) + 2);
+	a = -1*a
+	var crt = a*b;
+	
+	var wrong1 = -1*crt;
+	var sign = Math.random() < 0.5 ? -1 : 1;
+	var wrong2 = sign+crt;
+	var wrong3 = -1*crt+sign;
+	optionsAlg = [crt, wrong1, wrong2, wrong3];
+	options = stringOpts(optionsAlg);
+	katex.render(a+"\\times "+b, question);
+	var inner = document.getElementById("question").innerHTML
+	printOpts(options);
+}
+
+function doMulti3(){//a x(-b)
+	var a = Math.floor((Math.random() * 8) + 3);
+	var b = Math.floor((Math.random() * 9) + 2);
+	b = -1*b
+	var crt = a*b;
+	var wrong1 = -1*crt;
+	var sign = Math.random() < 0.5 ? -1 : 1;
+	var wrong2 = sign+crt;
+	var wrong3 = -1*crt+sign;
+	optionsAlg = [crt, wrong1, wrong2, wrong3];
+	options = stringOpts(optionsAlg);
+	katex.render(a+"\\times ("+b+")", question);
+	var inner = document.getElementById("question").innerHTML
+	printOpts(options);
+}
+function doMulti4(){//a x(-b)
+	var a = Math.floor((Math.random() * 8) + 3);
+	var b = Math.floor((Math.random() * 9) + 2);
+	a= -1*b
+	b = -1*b
+	crt = a*b
+	var wrong1 = -1*crt;
+	var sign = Math.random() < 0.5 ? -1 : 1;
+	var wrong2 = sign+crt;
+	var wrong3 = -1*crt+sign;
+	optionsAlg = [crt, wrong1, wrong2, wrong3];
+	options = stringOpts(optionsAlg);
+	katex.render(a+"\\times ("+b+")", question);
+	var inner = document.getElementById("question").innerHTML
+	printOpts(options);
+}
+
+
+function doCalc10(){//ax + b + cx 
+	Math.random() < 0.5 ? (Math.random() < 0.5 ? doMulti1() : doMulti2()) : (Math.random() < 0.5 ? doMulti3() : doMulti4())
 }
 function doCalc11(){//ax + b + cx + d
 	var a = 0;

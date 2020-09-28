@@ -77,7 +77,7 @@ function drop(ev) {
             }
         }
         if(operator == 3){
-               var ans=expres2.multiply(expres1)
+               var ans=expres2 *expres1
                ans = algebra.toTex(ans)
                ans = ans.replace('{','')
                ans = ans.replace('}','')
