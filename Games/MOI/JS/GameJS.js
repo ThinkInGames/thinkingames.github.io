@@ -133,12 +133,13 @@ function checkAns(opt){
 		document.getElementById("weapon").style.visibility="visible";
 		timeAlfW = setInterval(alfShoots, 10);
 		if(oppPos>arenaRight){
+			level++
 			win.play()
 			document.getElementById("opponent").style.opacity = "0";
 			document.getElementById("opponent").style.transition = "opacity 2s";
 			document.getElementById("question").innerHTML="";
 			document.getElementById("questionFrame").style.lineHeight="30px";
-			document.getElementById("questionFrame").innerHTML = "Congrats! You are ready to apply your skills!<br><button onclick='startDnD("+level+")'>Continue</button>";
+			document.getElementById("questionFrame").innerHTML = "Congrats!<br> You are ready to move on!<br><button onclick='launch("+level+")'>Continue</button>";
 			clearInterval(timeOppMove);
 			document.getElementById("btn1").disabled = true;
 			document.getElementById("btn2").disabled = true;

@@ -12,57 +12,30 @@ function setQuestion(l){
 			doAdding1();//a + b, helppo
 		break;
 		case 2 : 
-			doAdding2();//a + b, keskivaikea
-		break;
-		case 3 : 
 			doSub1();//a-b| vastaus > 0, helppo
 		break;
-		case 4 : 
-			doSub2();//a-bx vastaus > 0, keskivaikea
-		break;
-		case 5 : 
+		case 3 : 
 			doCalc1();//a+b, voi olla b<0, helppo
 		break;
-		case 6 : 
-			doCalc2();//a+b, voi olla b<0 keskivikea
-		break;
-		case 7 : 
-			doAdding3();//a + b, iso ja pieni 
-		break;
-		case 8 : 
-			doAdding4();//a+b, kaksi isoa 
-		break;
-		case 9 : 
-			doSub3();//a-b, Iso ja pieni
-		break;
-		case 10 : 
-			doSub4();//a-b, Iso ja iso
-		break;
-		case 11 : 
-			doCalc3();//a+-b, iso ja pieni
-		break;
-		case 12 : 
-			doCalc4();//a+-b, iso ja iso
-        break;
-        case 13 : 
+        case 4 : 
 			doSub5();//a-b < 0, keski
         break;
-        case 14:
-            doAdding5()//ax + (-bx),keski
+        case 5:
+            doAdding5()//a + (-b),keski
 		break;
-		case 15:
-            doCalc5()//ax - (-bx),keski
+		case 6:
+            doCalc5()//a - (-b),keski
 		break;
-		case 16:
-            doCalc6()//-ax - (-bx),keski
+		case 7:
+            doCalc6()//-a - (-b),keski
 		break;
-		case 17:
-            doCalc7()//-+ax -+ (-+bx),keski
+		case 8:
+            doCalc7()//-+a -+ (-+b),keski
 		break;
-		case 18:
+		case 9:
             doCalc8()//ax + bx + cx, helppo
 		break;
-		case 19:
+		case 10:
             doCalc9()//ax + bx + cx, vaikea
 		break;
 /**************************************************************************************************
@@ -84,7 +57,7 @@ function setQuestion(l){
 			doCalc10()//+-a x (+-b)
 		break;
 /**************************************************************************************************
-			P H A S E   2  E N D S
+			P H A S E   1  E N D S
 *************************************************************************************************/
 		/*case 25:
             doCalc15()//ax^n + bx^m + cx^n + dx^m
