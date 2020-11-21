@@ -1,0 +1,78 @@
+a + b, helppo
+a + b, keskivaikeavaikea
+a-b| vastaus > 0, helppo
+a-b| vastaus > 0, keskivaikeavaikea
+a+-b, helppo
+a+-b, keskivikea
+ax + bx, iso ja pieni
+a+b, kaksi isoa 
+a-b, Iso ja pieni 
+a-b, kaksi isoa 
+a+-b, iso ja pieni
+a+-b, iso ja iso
+a-b < 0, keski
+a + (-b), keski
+a - (-b),keski
+-a - (-b),keski
+-+a -+ (-+b),keski
+a + b + c, helppo
+a + b + c, vaikea
+*******************************
+P H A S E  1
+*******************************
+a x b
+-a x b
+a x (-b)
+-a x (-b)
++-a x +-b
+
+
+
+ax + b + cx + d
+ax + by + cx + dy
+ax^2 + b + cx^2 + d
+ax^2 + bx + cx^2 + dx //what ever x
+ax^n + bx^m + cx^n + dx^m
+ax^n + by^m + cx^n + dy^m
+a*bx| a,b>0
+a*bx| voi olla a,b<0
+ax*bx^n
+x^n*x^m
+ax^n*bx^m| a,b>0
+ax^n*bx^m| voi olla a,b<0
+ax/b| a,b>0
+case(24)://ax/b| voi olla a,b<0
+case(25)://ax^n/bx^m, vastaus eksponenttina
+case(26)://ax^n/bx^m, vastaus voi olla murtoluku
+case(27)://(x^n)^m
+case(28)://(ax^n)^m|a>0
+case(29)://(ax^n)^m|a<0
+case(30)://(ax^n)^m| kaikilla a
+case(31)://x^n*x^m/x^k
+case(32)://ax^n*bx^m/cx^k| a, b, c, > 0
+case(33)://ax^n*bx^m/cx^k| a, b, c voi negatiivinen tai positiivinen
+case(34)://a(bx+c)| a, b, c > 0
+case(35)://a(bx+c)| voi olla b, c < 0
+case(36)://a(bx+c)| voi olla a, b, c < 0
+case(37)://ax(bx+c)| voi olla c<0
+case(38)://ax^n(bx^m+c)| voi olla c<0
+case(39)://x^n*y^m*x^k
+case(40)://ax^n*by^m*cx^k| a,b,c>0
+case(41)://ax^n*by^m*cx^k| voi olla a,b,c<0
+case(42)://(x+a)(x-a)
+case(43)://(x+a)^2
+case(44)://(x-a)^2
+case(45)://(ax+b)(ax-b)
+case(46)://(ax+b)^2
+case(47)://(ax-b)^2
+case(48)://(ax+b)(cx-d)
+case(49)://(ax+b)/c
+case(50)://(ax^k+bx^m)/cx^n
+case(51)://(ax+b)/(cx+d)=e
+case(52)://(ax^n+bx^m)/(cx^k+dx^l)=ex^p
+case(53)://(a^2-b^2)/a+-b
+case(54)://(a+-b)^2/(a+-b)
+case(55)://n(a+-b)^2/(a+-b)
+case(56)://(ax+b)(cx + d)/(a+b)
+case(57)://n(ax+b)(cx + d)/(a+b)
+		

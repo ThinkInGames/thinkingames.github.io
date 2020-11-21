@@ -1,0 +1,123 @@
+#DnDs{
+	position:relative;
+	width:400px;
+	height: 150px;
+	text-align:center;
+	background-color: white;
+	border:1px solid;
+	margin: auto;
+}
+.div{
+	position:relative;
+	width: 90px;
+	height: 90px;
+	color:white;
+	line-height:90px;
+	text-align:center;
+	font-size: 12px;
+	border-radius:5px;
+	
+}
+#div1{
+	position:absolute;
+	top: 30px;
+	left:5px;
+	
+	
+}
+.divFrame{
+	position:absolute;
+	width: 90px;
+    height: 90px;
+	opacity: 1;
+	z-index:1;
+	border-radius:5px;
+	border:1px solid;
+	
+}
+#div1Frame{
+	top: 30px;
+	left:5px;
+	
+}
+#div2{
+	position:absolute;
+	top: 30px;
+	left:105px;
+}
+#div2Frame{
+	top: 30px;
+	left:105px;
+	width: 90px;
+    height: 90px;
+	opacity: 1;
+	z-index:1;
+}
+#div3{
+	position:absolute;
+	top: 30px;
+	left:205px;
+}
+#div3Frame{
+	top: 30px;
+	left:205px;
+	width: 90px;
+    height: 90px;
+	opacity: 1;
+	z-index:1;
+}
+#div4{
+	position:absolute;
+	top: 30px;
+	left:305px;
+}
+#div4Frame{
+	top: 30px;
+	left:305px;
+	width: 90px;
+    height: 90px;
+	opacity: 1;
+	z-index:1;
+}
+#operatorField{
+	position: relative;
+	font-family:impact;
+	height:150px;
+	width: 400px;
+	text-align:center;
+	
+}
+.operator{
+	position:relative;
+	width: 90px;
+	height: 90px;
+	color: white;
+	line-height:90px;
+	text-align:center;
+	font-size: 48px;
+	border-radius:5px;
+}
+#add{
+	position:absolute;
+	top: 40px;
+	left:5px;
+	background-color: #3C6E71
+}
+#sub{
+	position:absolute;
+	top: 40px;
+	left:105px;
+	background-color: #2F6690;
+}
+#mul{
+	position:absolute;
+	top: 40px;
+	left:205px;
+	background-color: #483C56 ;
+}
+#division{
+	position:absolute;
+	top: 40px;
+	left: 305px;
+	background-color: #1F2041;
+}
