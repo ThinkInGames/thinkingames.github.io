@@ -38,49 +38,49 @@ function operatorVisibility(l){
 function genData(div, l){
     switch(l){
         case 1:
-            var a = Math.floor((Math.random() * 3) + 1)+"* x"
+            var a = Math.floor((Math.random() * 3) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 2: case 4: case 5: case 6: case 13:
-            var a = Math.floor((Math.random() * 10) + 1)+"* x"
+            var a = Math.floor((Math.random() * 10) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 3:
-            var a = Math.floor((Math.random() * 5) + 1)+"* x"
+            var a = Math.floor((Math.random() * 5) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 7: case 9: case 11:
-            var a = Math.floor((Math.random() * 20) + 1)+"* x"
+            var a = Math.floor((Math.random() * 20) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 8:
-            var a = Math.floor((Math.random() * 10) + 10)+"* x"
+            var a = Math.floor((Math.random() * 10) + 10)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 10: case 12:
-            var a = Math.floor((Math.random() * 20) + 10)+"* x"
+            var a = Math.floor((Math.random() * 20) + 10)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 14: case 17: case 18:
             var sign = Math.random() < 0.5 ? -1 : 1;
-            var a =sign* Math.floor((Math.random() * 10) + 1)+"* x"
+            var a =sign* Math.floor((Math.random() * 10) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 19:
             var sign = Math.random() < 0.5 ? -1 : 1;
-            var a =sign* Math.floor((Math.random() * 20) + 1)+"* x"
+            var a =sign* Math.floor((Math.random() * 20) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
         case 15: case 16:
-            var a =-1* Math.floor((Math.random() * 10) + 1)+"* x"
+            var a =-1* Math.floor((Math.random() * 10) + 1)+"*x"
             var aAlg = new algebra.parse(a);
             setAtrributes(a, aAlg, div)
         break;
@@ -89,7 +89,7 @@ function genData(div, l){
             while(a==0){a=Math.floor((Math.random() *20) -10)}
             var choose = Math.random() 
             if(choose < 0.5){
-                    a+="* x"
+                    a+="*x"
                     var aAlg = new algebra.parse(a);
             }else{
                     var aAlg = a;

@@ -12,7 +12,7 @@ function launch(l){
 	shoot = new sound("Audio/PuustinenShoots.mp3")
 	win = new sound("Audio/Win.mp3")
 	lost = new sound("Audio/Lost.mp3")
-	//l = chooseLevel()
+	l = chooseLevel()
 	setQuestion(l);
 	document.getElementById('opponent').style.marginRight="50px"
 	document.getElementById('alfred').style.marginLeft="60px"

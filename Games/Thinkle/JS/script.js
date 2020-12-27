@@ -6,7 +6,7 @@ function startDnD(l){
     document.getElementById("DnDs").style.display=""
     document.getElementById("operatorField").style.display=""
     level = l;
-    l = chooseLevel()
+    //l = chooseLevel()
     setDropAns(l);
     katex.render(document.getElementById("div1").getAttribute("data"),div1);
     katex.render(document.getElementById("div2").getAttribute("data"),div2);
@@ -49,7 +49,7 @@ function drop(ev) {
     }else if(landing!="questionFrame"&& landing!=data){
         var divLand = landing.substring(0, 4)
         var term1 = document.getElementById(divDrag).getAttribute("stringData")
-        console.log(term1)
+        
         var expres1 = new algebra.parse(term1);
         var term2 = document.getElementById(divLand).getAttribute("stringData")
         var expres2 = new algebra.parse(term2);
@@ -58,13 +58,14 @@ function drop(ev) {
         
         if(operator == 1){
             if(idx2<idx1){
-                var ans=expres2.add(expres1)
-                document.getElementById(divLand).removeAttribute("indexData")
+                var ans=expres2.add(expres1)	
             }
             else{
                 var ans=expres1.add(expres2)
-                document.getElementById(divLand).removeAttribute("indexData")
             }
+			ans = algebra.toTex(ans)
+                document.getElementById(divLand).removeAttribute("indexData")
+			console.log(ans)
         }
         if(operator == 2){
             if(idx2<=idx1){
