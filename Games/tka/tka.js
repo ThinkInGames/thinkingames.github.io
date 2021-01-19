@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', theBegin, false);
 
 var variables = ["a", "b", "x", "y", 0];
-var interval = 10;
+var interval = 20;
 var sound, exp1, exp2, exp3, exp4, expTot, expTot1, expTot2, expTotWrong, expTotWrong1, expTotWrong2, expTotWrong3, expTotWrong4, expTotWrong5, expTotWrong6, expTotWrong7, expTotWrong8, expTotWrong9, expTotWrong10, expTotWrong11, parameter1, parameter2, parameter3, parameter4, wrong, wrong1, wrong2, wrong3, wrong4, wrong5, wrong6, wrong7, wrong8, wrong9, wrong10, wrong11, result, result1, result2, varIndex, varIndex1, varIndex2, sign1, sign2, sign3;
 var correctAnsBtn, timer;
 var correctAnss = 0;
@@ -389,8 +389,8 @@ function doClause(){//Does adding or subtraction with 2 monomial and 1 variable,
 	varIndex2=varIndex;
 	sign1=Math.round(Math.random()) * 2 - 1;
 	Math.round(Math.random()) * 2 - 1;
-	parameter1 = Math.floor((Math.random() * 14)+1);
-	parameter2 = sign1*Math.floor((Math.random() * 14)+1);
+	parameter1 = Math.floor((Math.random() * 10)+1);
+	parameter2 = sign1*Math.floor((Math.random() * 10)+1);
 	result = parameter1+parameter2;
 	wrong =  result + Math.floor((Math.random() * 2)+1);
 	wrong1 = result - Math.floor((Math.random() * 2)+1);
@@ -420,9 +420,9 @@ function doClause2(){//Does clause with 3 monomials and 1 variable, only adding
 	varIndex = Math.floor((Math.random() * 4));
 	varIndex1=varIndex;
 	varIndex2=varIndex;
-	parameter1 = Math.floor((Math.random() * 10)+1);
-	parameter2 = Math.floor((Math.random() * 10)+1);
-	parameter3 = Math.floor((Math.random() * 10)+1);
+	parameter1 = Math.floor((Math.random() * 5)+1);
+	parameter2 = Math.floor((Math.random() * 5)+1);
+	parameter3 = Math.floor((Math.random() * 5)+1);
 	
 	result = parameter1+parameter2+parameter3;
 	wrong =  result + Math.floor((Math.random() * 2)+1);
@@ -439,9 +439,9 @@ function doClause3(){//Does clause with 3 monomials and 1 variable, adding and s
 	sign1=Math.round(Math.random()) * 2 - 1;
 	sign2=Math.round(Math.random()) * 2 - 1;
 	sign3=Math.round(Math.random()) * 2 - 1;
-	parameter1 = sign1*Math.floor((Math.random() * 10)+1);
-	parameter2 = sign2*Math.floor((Math.random() * 10)+1);
-	parameter3 = sign3*Math.floor((Math.random() * 10)+1);
+	parameter1 = sign1*Math.floor((Math.random() * 5)+1);
+	parameter2 = sign2*Math.floor((Math.random() * 5)+1);
+	parameter3 = sign3*Math.floor((Math.random() * 5)+1);
 	
 	result = parameter1+parameter2+parameter3;
 	wrong =  result + Math.floor((Math.random() * 2)+1);
@@ -456,9 +456,9 @@ function doClause4(){//Does clause with 3 monomials and 2 variables
 	varIndex1 = 3-varIndex;
 	varIndex2=varIndex;
 	sign1=Math.round(Math.random()) * 2 - 1;
-	parameter1 = Math.floor((Math.random() * 10)+1);
-	parameter2 = Math.floor((Math.random() * 10)+1);
-	parameter3 = sign1*Math.floor((Math.random() * 10)+1);
+	parameter1 = Math.floor((Math.random() * 5)+1);
+	parameter2 = Math.floor((Math.random() * 5)+1);
+	parameter3 = sign1*Math.floor((Math.random() * 15)+1);
 	result1 = parameter1+parameter3;
 	result2 = parameter2;
 	expTot1 = 1;
@@ -485,10 +485,10 @@ function doClause5(){//Does clause with 4 monomials and 2 variables
 	varIndex2=varIndex;
 	sign1=Math.round(Math.random()) * 2 - 1;
 	sign2=Math.round(Math.random()) * 2 - 1;
-	parameter1 = Math.floor((Math.random() * 10)+1);
-	parameter2 = Math.floor((Math.random() * 10)+1);
-	parameter3 = sign1*Math.floor((Math.random() * 10)+1);
-	parameter4 = sign2*Math.floor((Math.random() * 10)+1);
+	parameter1 = Math.floor((Math.random() * 5)+1);
+	parameter2 = Math.floor((Math.random() * 5)+1);
+	parameter3 = sign1*Math.floor((Math.random() * 5)+1);
+	parameter4 = sign2*Math.floor((Math.random() * 5)+1);
 	result1 = parameter1+parameter3;
 	result2 = parameter2+parameter4;
 	expTot1 = 1;
